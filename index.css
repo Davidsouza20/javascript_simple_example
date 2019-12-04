@@ -6,16 +6,33 @@
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
-    animation-duration: 4s;
+    
 
 }
 
+.increase {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+
+.increase:hover {
+    width: 500px;
+  }
+
 @-webkit-keyframes example {
     from {background-color: red;}
-    to {background-color: yellow;}
+    to {background-color: yellow; 
+        transform: rotate(360deg); 
+    }
+    
   }
 
   @keyframes example {
     from {background-color: red;}
-    to {background-color: yellow;}
+    to {background-color: yellow; 
+        transform: rotate(360deg); 
+    }
   }

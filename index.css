@@ -20,6 +20,7 @@
 
 .increase:hover {
     width: 500px;
+    background-color: red;
   }
 
 @-webkit-keyframes example {
@@ -35,4 +36,9 @@
     to {background-color: yellow; 
         transform: rotate(360deg); 
     }
+  }
+
+  #change-from-js {
+    width: 500px;
+    background-color: yellowgreen;
   }

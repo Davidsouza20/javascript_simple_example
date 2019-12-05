@@ -1,3 +1,5 @@
-var date = new Date();
+function changeBlue () {
+    document.getElementById("change-from-js").style.backgroundColor = "blue";
+}
 
 

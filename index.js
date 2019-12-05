@@ -27,16 +27,29 @@ class Car  {
 }
 
 
-window.onload = function() {
+window.onload = async function() {
     var btn = document.createElement("BUTTON");   
     btn.innerHTML = "CLICK ME";   
     btn.onclick = () => {
         car = new Car('Fit', 'Honda', '950', 'gray');
         car.start();
+        stringCar = JSON.stringify(car);
+        alert(stringCar);
         alert('Car name: ' + car.name + ' Car model: ' + car.model + ' Car color: ' + car.color + ' Is Started: ' + car.started);
     }        
     document.body.appendChild(btn); 
-};
+
+    
+
+
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    const myJson = await response.json();
+    stringData = JSON.stringify(myJson);
+    parsedData = JSON.parse(stringData);
+    console.log(parsedData.title);
+
+
+}
 
 
 

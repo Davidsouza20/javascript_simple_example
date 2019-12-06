@@ -39,14 +39,18 @@ window.onload = async function() {
     }        
     document.body.appendChild(btn); 
 
-    
-
-
+    //JSON Stringfy and Parse Fluency evidence
     const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
     const myJson = await response.json();
     stringData = JSON.stringify(myJson);
     parsedData = JSON.parse(stringData);
     console.log(parsedData.title);
+
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.moveTo(0, 0);
+    context.lineTo(2000, 100);
+    context.stroke();
 
 
 }

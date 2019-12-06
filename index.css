@@ -42,3 +42,7 @@
     width: 500px;
     background-color: yellowgreen;
   }
+
+  #canvas {
+    background-color: turquoise;
+  }
